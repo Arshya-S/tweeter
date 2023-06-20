@@ -1,11 +1,11 @@
 header {
   height: 700px;
   width: 100%;
+  background-color: #ADD8E6;
   background-color: #00acb8;
-  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  background-image: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
 }

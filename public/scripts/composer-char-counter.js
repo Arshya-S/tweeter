@@ -15,16 +15,8 @@ $(document).ready(function() {
         'color': 'red'
       })
     }
-    
+
     counter.val(currentCount);
-
-
-    
-    
-    
-
-  
-    
 
 
   });

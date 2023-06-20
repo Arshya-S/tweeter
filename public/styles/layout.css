@@ -26,7 +26,8 @@ body {
  */
 
  main {
-  background-color: #f4f1ec;
+  background-color: #4682B4;
+  background-image: url("https://www.transparenttextures.com/patterns/escheresque-dark.png");
   display: flex;
   padding: 5%;
   flex-direction: column;
