@@ -1,0 +1,25 @@
+nav {
+  position: fixed;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  font-family: 'Bungee', cursive;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5em;
+}
+
+#nav-right-text {
+  font-family: 'Source Sans 3', sans-serif;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nav-right-text p{
+  margin: 0;
+}
+
+
