@@ -1,19 +1,15 @@
 .new-tweet {
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 80%;
-  background-color: #6495ED;
+  width: 100%;
 }
 
 .tweet-form {
-  height: 100%;
-  width: 95%;
+  width: 100%;
+  height: 150px;
+  margin-top: 70px ;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 #tweet-text {
@@ -22,14 +18,17 @@
   resize: none;
   outline: none;
   overflow: hidden;
-  background-color: #6495ED;
+  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
+  background-color: #4faac9;
   width: 100%;
   height: 30px;
-  line-height: 1.5;
+  line-height: 1;
+  padding: 0;
 }
 
 .bottom-of-tweet {
   width: 100%;
+  padding-top: 25px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -40,8 +39,8 @@
 button {
   background-color: #4056A1;
   border: none;
+  border-radius: 5px;
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
-  
 }
 

@@ -2,7 +2,8 @@ nav {
   position: fixed;
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
+  background-color: #5876da;
+  background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
   display: flex;

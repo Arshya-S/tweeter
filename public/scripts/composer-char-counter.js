@@ -1,8 +1,18 @@
 $(document).ready(function() {
+
   const $textInput = $("#tweet-text");
+  const $label = $('#text-label');
   
+  // Create tweet text input event 
   $textInput.on('input',function(event) {
     event.preventDefault();
+
+    // Hide and show label based on if text is inputed
+    if ($textInput.val().length > 0) {
+      $label.hide();
+    } else {
+      $label.show();
+    }
 
     // Looks up to the parent (form) finds decendent with .counter
     const counter =  $(this).parent().find('.counter');
@@ -15,10 +25,6 @@ $(document).ready(function() {
         'color': 'red'
       })
     }
-
     counter.val(currentCount);
-
-
   });
- 
 });

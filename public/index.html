@@ -25,7 +25,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script defer type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
@@ -51,11 +51,11 @@
   </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main id="container">
 
       <section class="new-tweet">
         <form method="POST" action="/tweets" class="tweet-form">
-          <label for="tweet-text">What are you humming about?</label>
+          <label for="tweet-text" id="text-label">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div class="bottom-of-tweet">
             <button type="submit">Tweet</button>
@@ -64,32 +64,9 @@
         </form>
       </section>
 
-      <section class="made-tweet">
-        <article class="made-tweet-content">
-          <header class="tweet-header">
-            <div class="header-info">
-              <img class= 'tweet-image' src="https://i.imgur.com/73hZDYK.png"> 
-              <h3 class="tweet-name">Newton</h3>
-            </div>
-            
-            <h4>@SirIsaac</h4>
-
-          </header>
-          <div><p>If I have seen further it is by standing on the shoulders of giants</p></div>
-          <div class="horizontal-line"></div>
-
-          <footer class="tweet-footer">
-            <h4>10 days ago</h5>
-              <div class="footer-icons">
-                <i class="fa-solid fa-flag"></i>
-                <i class="fa-solid fa-arrows-rotate"></i>
-                <i class="fa-solid fa-heart"></i>
-              </div>
-           
-          </footer>
-        </article>
-      </section>
-
+     <section id="tweets-container"></section>
+      
+    
     </main>
   </body>
 </html>
