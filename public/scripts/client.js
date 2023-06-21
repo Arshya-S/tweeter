@@ -1,3 +1,7 @@
+$(document).ready(function() {
+  renderTweets(data);
+});
+
 const data = [
   {
     "user": {
@@ -52,10 +56,12 @@ const createTweetElement = (data) => {
 
 // Function to loop through tweet data and append to tweets-container
 const renderTweets = (tweets) => {
+  const $container = $('#tweets-container').empty();
+
   for (const tweet of tweets) {
-    $('#tweets-container').prepend(createTweetElement(tweet))
+    $container.prepend(createTweetElement(tweet))
   }
 };
 
-renderTweets(data);
+
 
