@@ -5,7 +5,7 @@
 .tweet-form {
   width: 100%;
   height: 150px;
-  margin-top: 70px ;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -21,7 +21,7 @@
   background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   background-color: #4faac9;
   width: 100%;
-  height: 30px;
+  height: 100px;
   line-height: 1;
   padding: 0;
 }
@@ -43,4 +43,3 @@ button {
   font-family: 'Bungee', cursive;
   color: #FFFFFF;
 }
-
