@@ -52,12 +52,9 @@ const createTweetElement = (data) => {
 
 // Function to loop through tweet data and append to tweets-container
 const renderTweets = (tweets) => {
-  
   for (const tweet of tweets) {
     $('#tweets-container').append(createTweetElement(tweet))
   }
-
-  
 };
 
 renderTweets(data);
