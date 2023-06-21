@@ -48,12 +48,19 @@ $(document).ready(function() {
 
   loadTweets();
 
-
   // Post request to /tweets on submission of form
   // Tweet created will then load in dynamically
   const $tweetForm = $('.tweet-form');
   $tweetForm.on('submit', (event) => {
     event.preventDefault();
+
+    const textArea = $tweetForm.find('#tweet-text').val();
+
+    if (textArea.length === 0) {
+      alert('Please type something to be able to submit!');
+    } else if (textArea.length > 140) {
+      alert('Please keep the character length to at most 140!');
+    }
 
     const serialized = $tweetForm.serialize();
 
@@ -66,4 +73,5 @@ $(document).ready(function() {
       }
     });
   });
+
 });
