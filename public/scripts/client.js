@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
   // Function to create a tweet based on data given
   const createTweetElement = (data) => {
     const $tweet = $(`
@@ -11,7 +16,7 @@ $(document).ready(function() {
           </div>
           <h4>${data.user.handle}</h4>
         </header>
-        <div>${data.content.text}</div>
+        <div>${escape(data.content.text)}</div>
         <div class="horizontal-line"></div>
         <footer class="tweet-footer">
             <h4>${timeago.format(data.created_at)}</h4>
@@ -55,17 +60,26 @@ $(document).ready(function() {
   const $tweetForm = $('.tweet-form');
   $tweetForm.on('submit', (event) => {
     event.preventDefault();
-
+    
+    
     const textArea = $tweetForm.find('#tweet-text').val();
+    const error = $('#error-display');
 
-    if (textArea.length === 0) {
-      alert('Please type something to be able to submit!');
-    } else if (textArea.length > 140) {
-      alert('Please keep the character length to at most 140!');
-    }
+    // upon submitting form have state be slide up and change depending on error presence
+    error.slideUp(() => {
+      if (textArea.length === 0) {
+        error.text('Error: Need to more than 0 characters to submit tweet');
+        error.slideDown()
+      } else if (textArea.length > 140) {
+        error.text('Error: Cannot exeed for than 140 characters');
+        error.slideDown()
+      } 
+    });
+    
 
     
 
+    
 
     const serialized = $tweetForm.serialize();
 
@@ -74,6 +88,7 @@ $(document).ready(function() {
       url: 'http://localhost:8080/tweets',
       data: serialized,
       success: () => {
+        error.slideUp();
         $tweetForm.find('#tweet-text').val('');
         $tweetForm.find('#text-label').show();
         loadTweets();
