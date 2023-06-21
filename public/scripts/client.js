@@ -25,6 +25,8 @@ $(document).ready(function() {
     `);
     return $tweet;
   };
+ 
+
 
   // Function to loop through tweet data and append to tweets-container
   const renderTweets = (tweets) => {
@@ -62,6 +64,9 @@ $(document).ready(function() {
       alert('Please keep the character length to at most 140!');
     }
 
+    
+
+
     const serialized = $tweetForm.serialize();
 
     $.ajax({
@@ -69,6 +74,8 @@ $(document).ready(function() {
       url: 'http://localhost:8080/tweets',
       data: serialized,
       success: () => {
+        $tweetForm.find('#tweet-text').val('');
+        $tweetForm.find('#text-label').show();
         loadTweets();
       }
     });
