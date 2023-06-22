@@ -20,5 +20,8 @@ The project tech-stack includes HTML, CSS, JS, jQuery, AJAX, Node and Express. T
 - Chance
 
 ## Screenshots
+Desktop view:
 !["Desktop view of main page"](https://github.com/Arshya-S/tweeter/blob/master/docs/desktop-view.png?raw=true)
+
+Tablet/Phone view:
 !["Tablet/phone view of main page"](https://github.com/Arshya-S/tweeter/blob/master/docs/phone-view.png?raw=true)
