@@ -1,22 +1,24 @@
 @media only screen and (min-width: 1024px) {
-  
   .main-page{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     width: 90%;
+    padding-top: 200px;
 
   }
 
   header {
     width: 30%;
     height: 450px;
+    margin-top: 15px; 
+ 
   
   }
 
   main {
     width: 55%;
-    padding-top: 210px;
+   
   }
 }

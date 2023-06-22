@@ -24,6 +24,7 @@
 
 .tweet-header {
   height: 25%;
+  width: 100%;
   background-image: none;
   background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   background-color:  #4faac9;

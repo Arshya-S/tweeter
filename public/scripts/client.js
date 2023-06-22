@@ -31,14 +31,12 @@ $(document).ready(function() {
     return $tweet;
   };
  
-
-
   // Function to loop through tweet data and append to tweets-container
   const renderTweets = (tweets) => {
     const $container = $('#tweets-container').empty();
 
     for (const tweet of tweets) {
-      $container.prepend(createTweetElement(tweet))
+      $container.prepend(createTweetElement(tweet));
     }
   };
 
@@ -69,11 +67,11 @@ $(document).ready(function() {
     error.slideUp(() => {
       if (textArea.length === 0) {
         error.text('Error: Need to more than 0 characters to submit tweet');
-        error.slideDown()
+        error.slideDown();
       } else if (textArea.length > 140) {
         error.text('Error: Cannot exeed for than 140 characters');
-        error.slideDown()
-      } 
+        error.slideDown();
+      }
     });
     
     const serialized = $tweetForm.serialize();
@@ -90,5 +88,4 @@ $(document).ready(function() {
       }
     });
   });
-
 });

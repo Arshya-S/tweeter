@@ -10,6 +10,7 @@ html {
   box-sizing: inherit;
 }
 
+
 body {
   color: #545149;
   background-color: #4faac9;
@@ -32,9 +33,6 @@ body {
   justify-content: center;
 }
 
-
 main {
   width: 90%;
 }
-
-
