@@ -18,3 +18,7 @@ The project tech-stack includes HTML, CSS, JS, jQuery, AJAX, Node and Express. T
 - Node 5.10.x or above
 - Body-parser
 - Chance
+
+## Screenshots
+!["Desktop view of main page"](https://github.com/Arshya-S/tweeter/blob/master/docs/desktop-view.png?raw=true)
+!["Tablet/phone view of main page"](https://github.com/Arshya-S/tweeter/blob/master/docs/phone-view.png?raw=true)
