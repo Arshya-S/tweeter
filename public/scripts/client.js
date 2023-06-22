@@ -76,11 +76,6 @@ $(document).ready(function() {
       } 
     });
     
-
-    
-
-    
-
     const serialized = $tweetForm.serialize();
 
     $.ajax({
