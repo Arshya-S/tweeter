@@ -30,13 +30,19 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+ .main-page {
   background-color: #4faac9;
   background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   display: flex;
-  width: 90%;
+  width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
  }
+
+
+ main {
+  width: 90%;
+ }
+
 

@@ -1,0 +1,34 @@
+@media only screen and (min-width: 1024px) {
+  
+  
+  .main-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+
+  }
+
+  header {
+    width: 30%;
+    height: 450px;
+  
+  }
+
+  main {
+    width: 55%;
+    padding-top: 210px;
+
+
+  }
+ 
+  
+
+  
+
+
+
+
+
+}
