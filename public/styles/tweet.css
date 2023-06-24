@@ -7,6 +7,7 @@
   border: 4px solid red;
   height: 160px;
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,7 +19,8 @@
 
 .tweet-form {
   width: 100%;
-  height: 150px;
+  height: auto;
+  min-height: 150px;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -35,7 +37,9 @@
   background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   background-color: #4faac9;
   width: 100%;
-  height: 30px;
+  height: auto;
+  min-height: 40px;
+  max-height: 400px;
   line-height: 1;
   padding: 0;
 }

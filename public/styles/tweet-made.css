@@ -1,6 +1,10 @@
 #tweets-container {
   width: 100%;
   overflow: auto;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; */
 }
 
 .tweet {
@@ -12,9 +16,8 @@
   align-items: flex-start;
   justify-content: space-between;
   margin-top: 25px;
-  margin-bottom: 25px;
   padding-left: 2%;
-  padding-right: 2%;
+  padding-right: 2%; 
 }
 
 .tweet:hover {
@@ -25,6 +28,7 @@
 .tweet-header {
   height: 25%;
   width: 100%;
+  margin-top: none;
   background-image: none;
   background-image: url("https://www.transparenttextures.com/patterns/corrugation.png");
   background-color:  #4faac9;

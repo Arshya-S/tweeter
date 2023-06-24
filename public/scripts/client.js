@@ -58,22 +58,31 @@ $(document).ready(function() {
   const $tweetForm = $('.tweet-form');
   $tweetForm.on('submit', (event) => {
     event.preventDefault();
+
+    // resets the text area height on submit in the case that user had a long tweet
     
     
     const textArea = $tweetForm.find('#tweet-text').val();
     const error = $('#error-display');
 
-    // upon submitting form have state be slide up and change depending on error presence
-    error.slideUp(() => {
-      if (textArea.length === 0) {
-        error.text('Error: Need to more than 0 characters to submit tweet');
-        error.slideDown();
-      } else if (textArea.length > 140) {
-        error.text('Error: Cannot exeed for than 140 characters');
-        error.slideDown();
-      }
-    });
     
+    // error handling for tweets equal to 0 or greater than 140
+    if (textArea.length === 0) {
+      error.text('Error: Need to more than 0 characters to submit tweet');
+      error.slideDown()
+      return;
+    }
+
+    if (textArea.length > 140) {
+      error.text('Error: Cannot exeed for than 140 characters');
+      error.slideDown();
+      return;
+    }
+
+    $tweetForm.find('#tweet-text').css({
+      'height': '40px'
+    })
+
     const serialized = $tweetForm.serialize();
 
     $.ajax({

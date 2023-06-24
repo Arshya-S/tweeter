@@ -4,7 +4,7 @@ $(document).ready(function() {
   const $label = $('#text-label');
   
   // Create tweet text input event 
-  $textInput.on('input',function(event) {
+  $textInput.on('input', function(event) {
     event.preventDefault();
 
     // Hide and show label based on if text is inputed
@@ -30,5 +30,10 @@ $(document).ready(function() {
       })
     }
     counter.val(currentCount);
+
+    // new tweet to expand text area as user types more.
+    this.style.height = this.scrollHeight + 'px';
   });
+
+
 });
